@@ -1,72 +1,11 @@
 #include "my_project_app.h"
 #include "my_utilities.h"
 
-//trying to enable the condition compilation 
 //#if __cplusplus >= 201103L
-
-//#include "curl/curl.h""
 
 using namespace std;
 
-//--------------------------------------------------------------------------------------------------------
-#ifdef SEND_MAIL_UNIX
-//sending an email
-//an unix code 
-
-#define HELO "HELO 192.168.1.1\r\n"
-#define DATA "DATA\r\n"
-#define QUIT "QUIT\r\n"
-
-//#define h_addr h_addr_list[0]
-//FILE *fin;
-int sock;
-struct sockaddr_in server;
-struct hostent *hp, *gethostbyname();
-char buf[BUFSIZ + 1];
-int len;
-char *host_id = "192.168.1.10";
-char *from_id = "amaresh.kumar@live.in";
-char *to_id = "kr.amaresh@gmail.com";
-char *sub = "mail from my code\r\n";
-char wkstr[100] = "Just checking if you are getting this message from my code\r\n";
-
-/*=====Send a string to the socket=====*/
-
-void send_socket(char *s)
-{
-	write(sock, s, strlen(s));
-	write(1, s, strlen(s));
-	//printf("Client:%s\n",s);
-}
-
-//=====Read a string from the socket=====*/
-
-void read_socket()
-{
-	len = read(sock, buf, BUFSIZ);
-	write(1, buf, len);
-	//printf("Server:%s\n",buf);
-}
-
-//end of (sending an email)
-#endif //SEND_MAIL_UNIX
-//--------------------------------------------------------------------------------------------------------
-
-// Value-Defintions of the different String values
-enum StringValueEnum {
-	socailNetwork = 1,
-	programmingQuestions = 2,
-	contactMe = 3,
-	polymorphic = 4,
-	threading = 5,
-	getMeOutOfHere = 10,
-	gc = 6, 
-	social = 7, 
-	overloading = 8
-};
-
 //Create maps to associate these anums with user command
-
 static std::map <std::string, StringValueEnum> user_command_string_map;
 static std::map <std::string, StringValueEnum> user_command_int_map;
 
@@ -87,11 +26,9 @@ bool is_number(char *s) {
 	else return false;
 }
 
-
-
 //declaration of user_command_map()
-void user_command_map();
-void user_command_map_int();
+//void user_command_map();
+//void user_command_map_int();
 static const int MAX_SIZE = 20;
 
 void my_utility(){
@@ -128,15 +65,13 @@ void my_utility(){
 								break;
 		}
 		case programmingQuestions: {
-                                            //Make an object of an interface which give blueprint of all functionalities
-                    cout<<"here 1\n";
-                                            programming_questions prog_q;
-                                            string user_command = "";
-                                            cout << "Enter new string to reverse:\n";
-                                            getline(std::cin, user_command);
-                                            cout << programming_questions::Reverse(user_command) << endl;
-                                            prog_q.Reverse(user_command);
-                                            break;
+//                                            programming_questions prog_q;
+//                                            string user_command = "";
+//                                            cout << "Enter new string to reverse:\n";
+//                                            getline(std::cin, user_command);
+//                                            cout << programming_questions::Reverse(user_command) << endl;
+//                                            prog_q.Reverse(user_command);
+//                                            break;
 		}
 		case contactMe: {
 	#ifdef SEND_MAIL_UNIX_2
@@ -216,23 +151,22 @@ void my_utility(){
 
 		switch (user_command_int_map[user_command]){
                     case polymorphic: {
-                                                              Utilities::polymorphic_activities();
+                                                              //polymorphic_activities();
                                                               break;
                     }
                     case programmingQuestions: {
-                        //Make an object of an interface which give blueprint of all functionalities
-                    cout<<"here 2\n";
-                                            programming_questions prog_q;
-                                            string user_command = "";
-                                            cout << "Enter new string to reverse:\n";
-                                            getline(std::cin, user_command);
-                                            cout << programming_questions::Reverse(user_command) << endl;
-                                            prog_q.Reverse(user_command);
-                                            break;
+                    
+//                                            programming_questions prog_q;
+//                                            string user_command = "";
+//                                            cout << "Enter new string to reverse:\n";
+//                                            getline(std::cin, user_command);
+//                                            cout << programming_questions::Reverse(user_command) << endl;
+//                                            prog_q.Reverse(user_command);
+//                                            break;
                     }
                     case threading: {
-                                                            My_ThreadActivities my_thread;
-                                                            my_thread.simple_thread_example();
+                                                            //My_ThreadActivities my_thread;
+                                                            //my_thread.simple_thread_example();
                                                             break;
                     }
                     case gc:
@@ -263,7 +197,7 @@ void my_utility(){
                     case social:{
                                                     std::cout << " website section:\n";
                                                     char linkedin_url[1000] = "https://in.linkedin.com/in/kumaramaresh//";
-    #if 0
+    #if SEND_MAIL_UNIX_2
                                                     //curl code
                                                     CURL *curl;
                                                     CURLcode res;
@@ -285,7 +219,7 @@ void my_utility(){
                                                             curl_easy_cleanup(curl);
                                                     }
                                                     //end of curl code
-    #endif
+    #endif //SEND_MAIL_UNIX_2
                                                     break;
                     }
                     default:
@@ -294,7 +228,6 @@ void my_utility(){
             cout<<"\nThank you for trying out this app. for any query write to amaresh.kumar@live.in\n";
 	} //end of else
 } 
-
 
 void user_command_map(){
 		user_command_string_map["social network"]		= socailNetwork,
@@ -314,87 +247,6 @@ void user_command_map_int(){
 	user_command_int_map["6"] = gc;
 	user_command_int_map["7"] = social;
 	user_command_int_map["8"] = overloading;
-}
-
-
-void bit_vector_example(){
-	
-
-#if 0
-	class my_bitvector_base {
-	protected:
-		class bitref { // Prevent this class from being used anywhere else.
-		public:
-			bitref(::std::uint64_t &an_int, ::std::uint64_t mask)
-				: an_int_(an_int), mask_(mask)
-			{
-			}
-
-			const bitref &operator =(bool val) {
-				if (val) {
-					an_int_ |= mask_;
-				}
-				else {
-					an_int_ &= ~mask_;
-				}
-				return *this;
-			}
-			const bitref &operator =(const bitref &br) {
-				return this->operator =(bool(br));
-			}
-			operator bool() const {
-				return ((an_int_ & mask_) != 0) ? true : false;
-			}
-
-		private:
-			::std::uint64_t &an_int_;
-			::std::uint64_t mask_;
-		};
-	};
-
-	template < ::std::size_t Size >
-	class my_bitvector : public my_bitvector_base {
-	private:
-		static constexpr::std::size_t numints = ((Size + 63) / 64);
-	public:
-		my_bitvector() { ::std::fill(array, array + numints, 0); }
-
-		bool operator [](::std::size_t bitnum) const {
-			const ::std::size_t bytenum = bit / 64;
-			bitnum = bitnum % 64;
-			return ((ints_[bytenum] & (::std::uint64_t(1) << bitnum)) != 0) ? true : false;
-		}
-		bitref operator[](::std::size_t bitnum) {
-			const ::std::size_t bytenum = bit / 64;
-			bitnum = bitnum % 64;
-			::std::uint64_t mask = ::std::uint64_t(1) << bitnum;
-			return bitref(ints_[bytenum], mask);
-		}
-
-	private:
-		::std::uint64_t ints_[numints];
-	};
-
-	void test(){}
-	my_bitvector<70> bits; // A 70 bit long bit vector initialized to all false
-	bits[1] = true; // Set bit 1 to true
-	bool abit = bits[1]; // abit should be true.
-	abit = bits[69]; // abit should be false.
-
-}
-
-#endif 
-
-
-	//int size = 5;
-	//std::vector <bool> my_bit_vector(size);
-	//cout << "Demonstration of bit vectors\n";
-	//
-	//for (int i = 0; i < my_bit_vector.size(); i++){
-	//	my_bit_vector[i] = true;
-	//	cout << "size of bit_vector elements : " << sizeof (my_bit_vector[i])<<"\n";
-	//}
-
 }
 
 //#endif //#if __cplusplus >= 201103L

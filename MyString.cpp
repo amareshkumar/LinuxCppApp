@@ -6,34 +6,34 @@
  */
 
 #include "MyString.hpp"
-#include "my_project_app.h"
-#include <string>
-#include <cstring>
+
 
 int MyString::no_of_MyString_Obj = 0;
+extern MyLogger* mylog; 
+
 
 MyString::MyString():m_str(NULL){
-    std::cout<<"MyString C-tor\n";
+    mylog->log_msg("MyString C-tor\n");
     no_of_MyString_Obj++;
 }
 
-MyString::MyString(char* st):m_str(NULL){
-    m_str = st; 
-    std::cout<<"MyString 1-C-tor\n";
+MyString::MyString(const char* st):m_str(NULL){
+    m_str = const_cast <char*> (st); 
+    mylog->log_msg("MyString 1-C-tor\n");
     no_of_MyString_Obj++;
 }
 
 MyString::~MyString(){
     //delete the memory allocated in copy c-tor
     //delete m_str; 
-    std::cout<<"MyString D-tor\n";
+    mylog->log_msg("MyString D-tor\n");
     no_of_MyString_Obj--;
 }
 
 MyString::MyString(const MyString& str){
     m_str = new char [sizeof (str)];
     m_str = str.m_str; 
-    cout<<"MyString copy c-tor called\n";
+    mylog->log_msg("MyString copy c-tor called\n");
     no_of_MyString_Obj++;
 }
 
@@ -56,14 +56,58 @@ void MyString::SetMyString(const char* st) {
     m_str = const_cast<char*>(st); 
 }
 
-void MyString::StringReverse (char *&reversed){
-    char temp; 
-    int st_len = strlen(reversed);  // replace with your own function
+char* MyString::MyStringReverse (char *str2Reverse){
+    int i, j = 0;
+    int st_len = strlen(str2Reverse);  // replace with your own function
     
-    for (int i = 0; i < (st_len/2); i++){
-        //swap the chars 
-        temp = reversed[i];
-        reversed [i] = reversed[st_len - i - 1];
-        reversed[st_len - i - 1] = temp;
+    char* mystr = new char [sizeof(str2Reverse)];
+    
+    //mystr = str2Reverse; 
+    
+    mylog->log_msg("Inside MyStringReverse func...");
+    //mylog->log_msg("The value of mystr is: ");
+    //mylog->log_msg (mystr);
+    
+    mylog->log_msg("Before the loop for reverting the string\n");
+    for (i = 0, j = st_len - 1; i < st_len; i++, j--){
+        mystr[i] = str2Reverse[j];
+//        cout << "mystr at i = "<<i<<" "<<mystr[i];
+//        cout << " ";
+//        cout << "str2Reverse at j = "<<j<<" "<<str2Reverse[j];
     }
+    mylog->log_msg("After the loop for reverting the string");
+    mylog->log_msg(mystr);
+    return mystr;
+}
+
+//char* MyString::operator+ (const char* str){
+//    strcpy (this->m_str, str);
+//    return m_str; 
+//}
+
+//MyString& operator+ (MyString& str) const {
+//    MyString mystr; 
+//    
+//    mystr.m_str = this->m_str + str.m_str; 
+//}
+
+char* MyString::myAppend (char* strToAppend) {
+    static int i; 
+    int j = 0;
+    char* temp = new char [sizeof(this->m_str) + sizeof(strToAppend)]; 
+    
+    mylog->log_msg(this->m_str);
+    mylog->log_msg(" + ");
+    mylog->log_msg(strToAppend);
+    
+    for (i = 0; i < strlen(this->m_str); i++){
+        temp[i] = this->m_str[i];
+    }
+    
+    for (j = 0; j < strlen(strToAppend); j++ ){
+        temp [i+j] = strToAppend[j];
+    }
+    mylog->log_msg ("After appending: ");
+    mylog->log_msg (temp);
+    return temp; 
 }

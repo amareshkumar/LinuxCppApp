@@ -35,29 +35,27 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/184637050/Cats.o \
-	${OBJECTDIR}/_ext/184637050/Instrument.o \
-	${OBJECTDIR}/_ext/184637050/MyApplication.o \
-	${OBJECTDIR}/_ext/184637050/My_Threads.o \
-	${OBJECTDIR}/_ext/184637050/OOPs.o \
-	${OBJECTDIR}/_ext/184637050/Queue.o \
-	${OBJECTDIR}/_ext/184637050/Smart_Pointers.o \
-	${OBJECTDIR}/_ext/184637050/Stack.o \
-	${OBJECTDIR}/_ext/184637050/ThrustActivities.o \
-	${OBJECTDIR}/_ext/184637050/array.o \
-	${OBJECTDIR}/_ext/184637050/d_linked_list.o \
-	${OBJECTDIR}/_ext/184637050/gc.o \
-	${OBJECTDIR}/_ext/184637050/graph.o \
-	${OBJECTDIR}/_ext/184637050/linked_list.o \
-	${OBJECTDIR}/_ext/184637050/main.o \
-	${OBJECTDIR}/_ext/184637050/my_bolt.o \
-	${OBJECTDIR}/_ext/184637050/my_utilities.o \
-	${OBJECTDIR}/_ext/184637050/polymorphic_activiites.o \
-	${OBJECTDIR}/_ext/184637050/programming.o \
-	${OBJECTDIR}/_ext/184637050/reversal.o \
-	${OBJECTDIR}/_ext/184637050/sorting.o \
-	${OBJECTDIR}/_ext/184637050/test_my_project.o \
-	${OBJECTDIR}/_ext/184637050/tree.o
+	${OBJECTDIR}/Instrument.o \
+	${OBJECTDIR}/MyLogger.o \
+	${OBJECTDIR}/MyString.o \
+	${OBJECTDIR}/MyThread.o \
+	${OBJECTDIR}/OOPs.o \
+	${OBJECTDIR}/Stack.o \
+	${OBJECTDIR}/TestLogic.o \
+	${OBJECTDIR}/ThrustActivities.o \
+	${OBJECTDIR}/Tiger.o \
+	${OBJECTDIR}/array.o \
+	${OBJECTDIR}/d_linked_list.o \
+	${OBJECTDIR}/gc.o \
+	${OBJECTDIR}/linked_list.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/my_utilities.o \
+	${OBJECTDIR}/polymorphic_activiites.o \
+	${OBJECTDIR}/programming.o \
+	${OBJECTDIR}/reversal.o \
+	${OBJECTDIR}/sorting.o \
+	${OBJECTDIR}/test_my_project.o \
+	${OBJECTDIR}/tree.o
 
 
 # C Compiler Flags
@@ -84,120 +82,110 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/amareshapp.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/amareshapp ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/184637050/Cats.o: /D/code/amareshapp/amareshapp/Cats.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/Instrument.o: Instrument.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/Cats.o /D/code/amareshapp/amareshapp/Cats.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instrument.o Instrument.cpp
 
-${OBJECTDIR}/_ext/184637050/Instrument.o: /D/code/amareshapp/amareshapp/Instrument.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/MyLogger.o: MyLogger.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/Instrument.o /D/code/amareshapp/amareshapp/Instrument.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MyLogger.o MyLogger.cpp
 
-${OBJECTDIR}/_ext/184637050/MyApplication.o: /D/code/amareshapp/amareshapp/MyApplication.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/MyString.o: MyString.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/MyApplication.o /D/code/amareshapp/amareshapp/MyApplication.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MyString.o MyString.cpp
 
-${OBJECTDIR}/_ext/184637050/My_Threads.o: /D/code/amareshapp/amareshapp/My_Threads.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/MyThread.o: MyThread.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/My_Threads.o /D/code/amareshapp/amareshapp/My_Threads.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MyThread.o MyThread.cpp
 
-${OBJECTDIR}/_ext/184637050/OOPs.o: /D/code/amareshapp/amareshapp/OOPs.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/OOPs.o: OOPs.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/OOPs.o /D/code/amareshapp/amareshapp/OOPs.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/OOPs.o OOPs.cpp
 
-${OBJECTDIR}/_ext/184637050/Queue.o: /D/code/amareshapp/amareshapp/Queue.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/Stack.o: Stack.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/Queue.o /D/code/amareshapp/amareshapp/Queue.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Stack.o Stack.cpp
 
-${OBJECTDIR}/_ext/184637050/Smart_Pointers.o: /D/code/amareshapp/amareshapp/Smart_Pointers.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/TestLogic.o: TestLogic.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/Smart_Pointers.o /D/code/amareshapp/amareshapp/Smart_Pointers.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TestLogic.o TestLogic.cpp
 
-${OBJECTDIR}/_ext/184637050/Stack.o: /D/code/amareshapp/amareshapp/Stack.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/ThrustActivities.o: ThrustActivities.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/Stack.o /D/code/amareshapp/amareshapp/Stack.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ThrustActivities.o ThrustActivities.cpp
 
-${OBJECTDIR}/_ext/184637050/ThrustActivities.o: /D/code/amareshapp/amareshapp/ThrustActivities.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/Tiger.o: Tiger.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/ThrustActivities.o /D/code/amareshapp/amareshapp/ThrustActivities.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Tiger.o Tiger.cpp
 
-${OBJECTDIR}/_ext/184637050/array.o: /D/code/amareshapp/amareshapp/array.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/array.o: array.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/array.o /D/code/amareshapp/amareshapp/array.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/array.o array.cpp
 
-${OBJECTDIR}/_ext/184637050/d_linked_list.o: /D/code/amareshapp/amareshapp/d_linked_list.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/d_linked_list.o: d_linked_list.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/d_linked_list.o /D/code/amareshapp/amareshapp/d_linked_list.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/d_linked_list.o d_linked_list.cpp
 
-${OBJECTDIR}/_ext/184637050/gc.o: /D/code/amareshapp/amareshapp/gc.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/gc.o: gc.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/gc.o /D/code/amareshapp/amareshapp/gc.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gc.o gc.cpp
 
-${OBJECTDIR}/_ext/184637050/graph.o: /D/code/amareshapp/amareshapp/graph.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/linked_list.o: linked_list.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/graph.o /D/code/amareshapp/amareshapp/graph.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/linked_list.o linked_list.cpp
 
-${OBJECTDIR}/_ext/184637050/linked_list.o: /D/code/amareshapp/amareshapp/linked_list.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/main.o: main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/linked_list.o /D/code/amareshapp/amareshapp/linked_list.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/_ext/184637050/main.o: /D/code/amareshapp/amareshapp/main.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/my_utilities.o: my_utilities.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/main.o /D/code/amareshapp/amareshapp/main.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/my_utilities.o my_utilities.cpp
 
-${OBJECTDIR}/_ext/184637050/my_bolt.o: /D/code/amareshapp/amareshapp/my_bolt.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/polymorphic_activiites.o: polymorphic_activiites.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/my_bolt.o /D/code/amareshapp/amareshapp/my_bolt.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/polymorphic_activiites.o polymorphic_activiites.cpp
 
-${OBJECTDIR}/_ext/184637050/my_utilities.o: /D/code/amareshapp/amareshapp/my_utilities.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/programming.o: programming.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/my_utilities.o /D/code/amareshapp/amareshapp/my_utilities.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/programming.o programming.cpp
 
-${OBJECTDIR}/_ext/184637050/polymorphic_activiites.o: /D/code/amareshapp/amareshapp/polymorphic_activiites.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/reversal.o: reversal.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/polymorphic_activiites.o /D/code/amareshapp/amareshapp/polymorphic_activiites.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/reversal.o reversal.cpp
 
-${OBJECTDIR}/_ext/184637050/programming.o: /D/code/amareshapp/amareshapp/programming.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/sorting.o: sorting.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/programming.o /D/code/amareshapp/amareshapp/programming.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sorting.o sorting.cpp
 
-${OBJECTDIR}/_ext/184637050/reversal.o: /D/code/amareshapp/amareshapp/reversal.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/test_my_project.o: test_my_project.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/reversal.o /D/code/amareshapp/amareshapp/reversal.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_my_project.o test_my_project.cpp
 
-${OBJECTDIR}/_ext/184637050/sorting.o: /D/code/amareshapp/amareshapp/sorting.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
+${OBJECTDIR}/tree.o: tree.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/sorting.o /D/code/amareshapp/amareshapp/sorting.cpp
-
-${OBJECTDIR}/_ext/184637050/test_my_project.o: /D/code/amareshapp/amareshapp/test_my_project.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/test_my_project.o /D/code/amareshapp/amareshapp/test_my_project.cpp
-
-${OBJECTDIR}/_ext/184637050/tree.o: /D/code/amareshapp/amareshapp/tree.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/184637050
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/184637050/tree.o /D/code/amareshapp/amareshapp/tree.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tree.o tree.cpp
 
 # Subprojects
 .build-subprojects:

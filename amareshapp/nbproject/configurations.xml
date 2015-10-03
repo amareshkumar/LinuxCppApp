@@ -4,7 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>../IFelid.h</itemPath>
+      <itemPath>../MyLogger.hpp</itemPath>
       <itemPath>../MyString.hpp</itemPath>
+      <itemPath>../TestLogic.hpp</itemPath>
+      <itemPath>../Tiger.hpp</itemPath>
+      <itemPath>../my_utilities.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +18,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>../MyLogger.cpp</itemPath>
       <itemPath>../MyString.cpp</itemPath>
+      <itemPath>../TestLogic.cpp</itemPath>
+      <itemPath>../Tiger.cpp</itemPath>
       <itemPath>../main.cpp</itemPath>
+      <itemPath>../my_utilities.cpp</itemPath>
+      <itemPath>../reversal.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -42,11 +52,31 @@
           <standard>8</standard>
         </ccTool>
       </compileType>
+      <item path="../IFelid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../MyLogger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../MyLogger.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../MyString.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../MyString.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../TestLogic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../TestLogic.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../Tiger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Tiger.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../my_utilities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../my_utilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../reversal.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -69,11 +99,31 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="../IFelid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../MyLogger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../MyLogger.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../MyString.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../MyString.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../TestLogic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../TestLogic.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../Tiger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Tiger.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../my_utilities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../my_utilities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../reversal.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

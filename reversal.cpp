@@ -1,7 +1,5 @@
-#include <string>
-#include <iostream>
-#include <vector>
-
+#include "my_project_app.h"
+#include "programming.h"
 using namespace std;
 
 static const int command_max_size = 100;

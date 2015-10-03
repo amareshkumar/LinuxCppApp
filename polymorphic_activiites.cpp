@@ -1,12 +1,13 @@
-#include "polymorphic_activiites.h"
-#include "Cats.h"
-#include <iostream>
-#include "my_utilities.h"
+//#include "Cats.h"
+#include "my_project_app.h"
 
 using namespace std;
 
-void Utilities::polymorphic_activities()
+//void Utilities::polymorphic_activities()
+void polymorphic_activities()
 {
+    
+#ifdef CAT
 	Cat cat;
 	Tiger tiger;
 	Ocelot ocelot;
@@ -32,6 +33,8 @@ void Utilities::polymorphic_activities()
 	std::cout << "\n\nAnother practical\n";
 	//Felid felid;
 	std::cout << "\nEnd of \"Another practical\"\n\n";
-
+#endif //CAT
+        
+        
 }
 

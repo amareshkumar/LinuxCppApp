@@ -1,5 +1,4 @@
 #include "my_project_app.h"
-#include <iomanip>
 
 void print_d_arra(int d_array[][4]);
 void add_each_2darray(int arra[][4], int add_value);
@@ -104,12 +103,9 @@ void print_array2(int this_array[][4]){
 	}
 }
 
-#ifdef ARRAY_MAIN
-int main(){
-	//cout<<"Populate 2-d Array\n";
-	//populate_2darray();
-	std::cout << "\nCreating sparx-matrix\n";
+//helper functions call
+//cout<<"Populate 2-d Array\n";
+//populate_2darray();
+//std::cout << "\nCreating sparx-matrix\n";
+//create_sparx_matrix(4, 4);
 
-	create_sparx_matrix(4, 4);
-}
-#endif //ARRAY_MAIN

@@ -9,32 +9,29 @@
 #define	MYLOGGER_HPP
 
 #include "my_project_app.h"
-#include <fstream>
 
+//template <typename msg_type>
 class MyLogger {
-private:
-	MyLogger(){
-           // my_log_file.open("D:\code\amareshapp\my_log_file.log", std::fstream::in || std::fstream::out || std::fstream::app);
-        };
-	MyLogger(const MyLogger&){};
-	MyLogger& operator = (const MyLogger&){};
-	~MyLogger() {
-            my_log_file.close(); 
-        };
-        static MyLogger* pInstance_;
-public:
-	static MyLogger* get_instance(){
-		//Lock lock(mutex_);
-		if (!pInstance_)
-			pInstance_ = new MyLogger;
-	
-		//lock releases via lock destructor
-            return pInstance_;
-	}
-        
-        void log_msg (const char* log_str);
-        static std::fstream my_log_file; 
-        
+    private:
+            MyLogger(){}
+            MyLogger(const MyLogger&){}
+            MyLogger& operator = (const MyLogger&){}
+            ~MyLogger() { my_log_file.close(); } 
+            static MyLogger* pInstance_;
+    public:
+            static MyLogger* get_instance(){
+                    if (!pInstance_)
+                            pInstance_ = new MyLogger;
+                return pInstance_;
+            }
+            
+            void log_msg (const char* log_str);
+//            template <typename T>
+//            void log_msg (T log_str);
+            //char* operator+ (const char* str) const;
+            static std::fstream my_log_file; 
+            static char* m_log_str; 
+            //static msg_type m_log_str; 
 };
 
 #endif	/* MYLOGGER_HPP */

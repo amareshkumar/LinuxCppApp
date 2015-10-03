@@ -1,7 +1,7 @@
 #include "my_project_app.h"
 
-class  gc :public Utilities
-{
+//class  gc :public Utilities //Utilities sections are removed
+class gc {
 public:
 	 gc ();
 	~ gc ();
@@ -9,17 +9,15 @@ public:
 	void operator delete(void*);
 };
 
- gc :: gc ()
-{
+gc :: gc (){
 	 cout << "Constructor of gc is called\n";
 }
 
- gc ::~ gc ()
-{
+gc ::~ gc (){
 	 cout << "Destructor of gc is called\n";
 }
 
- void* gc::operator new(size_t size){
+void* gc::operator new(size_t size){
 	 void* storage = malloc(size);
 	 if (storage == NULL){
 		 cout << "no memory left to be allocated\n\n";
@@ -28,7 +26,7 @@ public:
 	 return storage;
 }
  
- void gc::operator delete (void* vp){
+void gc::operator delete (void* vp){
 	 cout << "my delete is being called\n";
 	 free(vp);
- }
+}
